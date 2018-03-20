@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.spotifycopy.MainActivity">
+
+    <!--android:background="#A6000000"-->
+    <!--Header of Spotify(copy) app-->
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:background="@drawable/border"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:baselineAligned="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_person_outline_black_24dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="4"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_settings_black_24dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <!--Footer of Spotify(copy) app-->
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_footer"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="true"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"
+            android:orientation="horizontal">
+
+
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:tint="#2def4a"
+                android:background="@null"
+                android:clickable="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_favorite_border_black_24dp" />
+
+            <TextView
+                android:id="@+id/textsong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:fontFamily="cursive"
+                android:text="End Game - Taylor Swift"
+                android:textColor="#ffffff"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_play_arrow_black_24dp" />
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@null"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#ffffff"
+                    android:drawableTop="@drawable/ic_home_black_24dp"
+                    android:text="Home"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@null"
+                    android:layout_weight="1"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="5dp"
+                    android:drawableTop="@drawable/ic_search_black_24dp"
+                    android:text="Search"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@null"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_playlist_add_black_24dp"
+                    android:text="Your Playlist"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <!--Scrollable Content of Spotify(copy) app-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/footer"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/gradient_middle"
+        android:layout_below="@id/header"
+        android:orientation="vertical">
+
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <!--Recently Played of Spotify(copy) app-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="25sp"
+                    android:fontFamily="cursive"
+                    android:text="Recently Played"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/zombie"
+                            android:onClick="buttonOnClick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:layout_margin="10dp"
+                            android:background="@null"
+                            android:textColor="#ffffff"
+                            android:drawableTop="@drawable/rc1"
+                            android:text="Zombie"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textStyle="bold" />
+
+
+                        <Button
+                            android:id="@+id/kingprincess"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="buttonOnClick"
+                            android:layout_margin="10dp"
+                            android:background="@null"
+                            android:drawableTop="@drawable/rc2"
+                            android:textColor="#ffffff"
+                            android:text="1950 princess"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/mine"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="buttonOnClick"
+                            android:layout_margin="10dp"
+                            android:background="@null"
+                            android:textColor="#ffffff"
+                            android:drawableTop="@drawable/rc3"
+                            android:text="Mine"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textStyle="bold" />
+
+
+                        <Button
+                            android:id="@+id/friends"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="buttonOnClick"
+                            android:layout_margin="10dp"
+                            android:background="@null"
+                            android:drawableTop="@drawable/rc4"
+                            android:text="FRIENDS"
+                            android:textColor="#ffffff"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/believe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="buttonOnClick"
+                            android:layout_margin="10dp"
+                            android:background="@null"
+                            android:textColor="#ffffff"
+                            android:drawableTop="@drawable/rc5"
+                            android:text="I Believe you"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textStyle="bold" />
+
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/button"
+                            android:text="View more" />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <!--Genre and Moods of Spotify(copy) app-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="25sp"
+                    android:fontFamily="cursive"
+                    android:text="Genre and Moods"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:textAlignment="center">
+
+                        <Button
+                            android:id="@+id/moodbooster"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@null"
+                            android:textColor="#ffffff"
+                            android:drawableTop="@drawable/gm1"
+                            android:text="Mood Booster"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textStyle="bold" />
+
+
+                        <Button
+                            android:id="@+id/dreamyvibes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@null"
+                            android:textColor="#ffffff"
+                            android:drawableTop="@drawable/gm2"
+                            android:text="Dreamy Vibes"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/confidenceboost"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@null"
+                            android:textColor="#ffffff"
+                            android:drawableTop="@drawable/gm3"
+                            android:text="Confidence Boost"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textStyle="bold" />
+
+
+                        <Button
+                            android:id="@+id/relax"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#ffffff"
+                            android:layout_margin="10dp"
+                            android:background="@null"
+                            android:drawableTop="@drawable/gm4"
+                            android:text="Rock n Relax"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@null"
+                            android:textColor="#ffffff"
+                            android:drawableTop="@drawable/gm5"
+                            android:text="Songs to Sing"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textStyle="bold" />
+
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#ffffff"
+                            android:background="@drawable/button"
+                            android:layout_gravity="center"
+                            android:text="View more" />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+
+                <!--New Releases of Spotify(copy) app-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="25sp"
+                    android:fontFamily="cursive"
+                    android:gravity="center"
+                    android:text="New Releases"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@null"
+                            android:textColor="#ffffff"
+                            android:drawableTop="@drawable/nr1"
+                            android:text="Travelling "
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textStyle="bold" />
+
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textColor="#ffffff"
+                            android:background="@null"
+                            android:drawableTop="@drawable/nr2"
+                            android:text="Viva Latino"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@null"
+                            android:drawableTop="@drawable/nr3"
+                            android:textColor="#ffffff"
+                            android:text="Women of the World"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textStyle="bold" />
+
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@null"
+                            android:textColor="#ffffff"
+                            android:drawableTop="@drawable/nr4"
+                            android:text="Blessings"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textStyle="bold" />
+
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/button"
+                            android:text="View more" />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <!--Made For You of Spotify(copy) app-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="25sp"
+                    android:fontFamily="cursive"
+                    android:gravity="center"
+                    android:text="Made For You"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@null"
+                            android:textColor="#ffffff"
+                            android:drawableTop="@drawable/m4u1"
+                            android:text="Daily MIX 1"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textStyle="bold" />
+
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#ffffff"
+                            android:layout_margin="10dp"
+                            android:background="@null"
+                            android:drawableTop="@drawable/m4u2"
+                            android:text="Daily MIX 2"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textStyle="bold" />
+
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/button"
+                            android:text="View more" />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <!--Charts of Spotify(copy) app-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="25sp"
+                    android:fontFamily="cursive"
+                    android:gravity="center"
+                    android:text="Charts"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@null"
+                            android:textColor="#ffffff"
+                            android:drawableTop="@drawable/c1"
+                            android:text="USA Top 50"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textStyle="bold" />
+
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@null"
+                            android:drawableTop="@drawable/c2"
+                            android:textColor="#ffffff"
+                            android:text="Global Top 50"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@null"
+                            android:drawableTop="@drawable/c3"
+                            android:textColor="#ffffff"
+                            android:text="Viral Global Top 50"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textStyle="bold" />
+
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:textColor="#ffffff"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@null"
+                            android:drawableTop="@drawable/c4"
+                            android:text="Viral USA Top 50"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textStyle="bold" />
+
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/button"
+                            android:text="View more" />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
